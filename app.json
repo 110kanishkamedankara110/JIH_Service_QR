@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "JIH Services",
+    "slug": "QR-code",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "jihservices",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "lk.phoenix.Qr"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-camera",
+      [
+        "react-native-permissions",
+        [
+          "react-native-permissions",
+          {
+            "cameraPermission": "Allow QR-code to access your camera",
+            "microphonePermission": "Allow QR-code to access your microphone",
+            "recordAudioAndroid": true,
+            "android": {
+              "permissions": [
+                "android.permission.CAMERA",
+                "android.permission.RECORD_AUDIO"
+              ]
+            }
+          }
+        ]
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "387ef08f-9004-43f5-8380-6c9bdfab2c1f"
+      }
+    },
+    "owner": "kanishkamedankara"
+  }
+}
